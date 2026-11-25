@@ -199,17 +199,19 @@ fn credit(ui: &egui::Ui, x: f32, y: f32, w: f32) -> f32 {
 
 fn row(ui: &egui::Ui, x: f32, y: f32, w: f32, l: &Line) -> f32 {
     let p = ui.painter();
-    let label = style::galley(ui, l.label, 12.0, Weight::W500, style::text_2(), 0.0);
+    // A long label in some language wraps, and pushes its value aside rather than lying under it.
+    let label = kit::wrapped_weight(ui, l.label, 12.0, Weight::W500, style::text_2(), w * 0.55, 1.4);
+    let value_x = (w * 0.4).max(label.size().x + 12.0);
     let color = if l.fine() { style::text_1() } else { style::warning() };
     let value = match (l.sent, l.name) {
         (Some(c), Some(n)) => format!("{c} \u{b7} {}", tr(n)),
         (Some(c), None) => c.to_string(),
         (None, _) => "\u{2014}".to_string(),
     };
-    let value = kit::wrapped_weight(ui, &value, 12.0, Weight::W400, color, w * 0.6, 1.4);
+    let value = kit::wrapped_weight(ui, &value, 12.0, Weight::W400, color, w - value_x, 1.4);
     let h = label.size().y.max(value.size().y) + 14.0;
     p.galley(Pos2::new(x, y + 7.0), label, style::text_2());
-    p.galley(Pos2::new(x + w * 0.4, y + 7.0), value, color);
+    p.galley(Pos2::new(x + value_x, y + 7.0), value, color);
     p.hline(
         egui::Rangef::new(x, x + w),
         y + h - 0.5,
