@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "CAA registration": "Behördliche Regisdrierung",
+    "Certified": "Zulassungsbflichdich",
+    "Compares the codes this station sends with the tables of ASTM F3411 and ASD-STAN. It reads only and changes nothing. It is no proof that the identity is valid.": "Vergleichd die Codes, die diese Sdadion sended, mid dene Dabelle von ASTM F3411 und ASD-STAN. Des Plugin liesd bloß und änderd nix. Es is kein Nachweis, dass die Idendidäd güldich is.",
+    "Compares the Remote ID codes this station sends with the tables of the standard": "Vergleichd die Remote-ID-Codes von dere Sdadion mid dene Dabelle von dere Norm",
+    "Description type": "Ard vo dere Beschreibung",
+    "EU category": "EU-Kadegorie",
+    "EU class": "EU-Klasse",
+    "Every code is one the standard names.": "Jeder Code is in dere Norm benannd.",
+    "Free fall or parachute": "Freier Fall oder Fallschirm",
+    "Live GNSS": "Live-GNSS",
+    "Not declared": "Ned angebne",
+    "Operator ID": "Bedreiber-ID",
+    "Operator ID type": "Ard vo dere Bedreiber-ID",
+    "Reading the identity…": "Idendidäd wird gelese…",
+    "Remote ID Check": "Remote-ID-Brüfung",
+    "Serial number": "Seriennummer",
+    "Specific": "Sbeziell",
+    "Takeoff point": "Sdarbunkd",
+    "Text": "Dexd",
+    "The broadcast is off. These codes would be sent.": "Die Aussendung is aus. Die Codes däde gsended werdne.",
+    "UTM assigned UUID": "Von UTM vergebne UUID",
+    "{field}: the standard names no code {a}.": "{field}: die Norm kennd kein Code {a}.",
+    "{field}: the station gave no code.": "{field}: die Sdadion had kein Code gnannd."
+  }
+}

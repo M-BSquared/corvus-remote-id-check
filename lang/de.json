@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "CAA registration": "Behördliche Registrierung",
+    "Certified": "Zulassungspflichtig",
+    "Compares the codes this station sends with the tables of ASTM F3411 and ASD-STAN. It reads only and changes nothing. It is no proof that the identity is valid.": "Vergleicht die Codes, die diese Station sendet, mit den Tabellen von ASTM F3411 und ASD-STAN. Das Plugin liest nur und ändert nichts. Es ist kein Nachweis, dass die Identität gültig ist.",
+    "Compares the Remote ID codes this station sends with the tables of the standard": "Vergleicht die Remote-ID-Codes dieser Station mit den Tabellen der Norm",
+    "Description type": "Art der Beschreibung",
+    "EU category": "EU-Kategorie",
+    "EU class": "EU-Klasse",
+    "Every code is one the standard names.": "Jeder Code ist in der Norm benannt.",
+    "Free fall or parachute": "Freier Fall oder Fallschirm",
+    "Live GNSS": "Live-GNSS",
+    "Not declared": "Nicht angegeben",
+    "Operator ID": "Betreiber-ID",
+    "Operator ID type": "Art der Betreiber-ID",
+    "Reading the identity…": "Identität wird gelesen…",
+    "Remote ID Check": "Remote-ID-Prüfung",
+    "Serial number": "Seriennummer",
+    "Specific": "Speziell",
+    "Takeoff point": "Startpunkt",
+    "Text": "Text",
+    "The broadcast is off. These codes would be sent.": "Die Aussendung ist aus. Diese Codes würden gesendet.",
+    "UTM assigned UUID": "Von UTM vergebene UUID",
+    "{field}: the standard names no code {a}.": "{field}: die Norm kennt keinen Code {a}.",
+    "{field}: the station gave no code.": "{field}: die Station nannte keinen Code."
+  }
+}

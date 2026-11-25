@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "CAA registration": "Enregistrement auprès de l'autorité",
+    "Certified": "Certifiée",
+    "Compares the codes this station sends with the tables of ASTM F3411 and ASD-STAN. It reads only and changes nothing. It is no proof that the identity is valid.": "Compare les codes envoyés par cette station avec les tables de l'ASTM F3411 et de l'ASD-STAN. Lecture seule, rien n'est modifié. Ce n'est pas une preuve que l'identité est valide.",
+    "Compares the Remote ID codes this station sends with the tables of the standard": "Compare les codes Remote ID de cette station avec les tables de la norme",
+    "Description type": "Type de description",
+    "EU category": "Catégorie UE",
+    "EU class": "Classe UE",
+    "Every code is one the standard names.": "Chaque code est défini par la norme.",
+    "Free fall or parachute": "Chute libre ou parachute",
+    "Live GNSS": "GNSS en direct",
+    "Not declared": "Non déclaré",
+    "Operator ID": "Identifiant exploitant",
+    "Operator ID type": "Type d'identifiant exploitant",
+    "Reading the identity…": "Lecture de l'identité…",
+    "Remote ID Check": "Contrôle Remote ID",
+    "Serial number": "Numéro de série",
+    "Specific": "Spécifique",
+    "Takeoff point": "Point de décollage",
+    "Text": "Texte",
+    "The broadcast is off. These codes would be sent.": "La diffusion est désactivée. Ces codes seraient envoyés.",
+    "UTM assigned UUID": "UUID attribué par l'UTM",
+    "{field}: the standard names no code {a}.": "{field} : la norme ne définit pas de code {a}.",
+    "{field}: the station gave no code.": "{field} : la station n'a donné aucun code."
+  }
+}
