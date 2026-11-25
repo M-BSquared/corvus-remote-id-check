@@ -4,7 +4,7 @@
 
 pub mod standard;
 
-use eframe::egui::{self, Pos2, Rect, Stroke, Vec2};
+use corvus_api::egui::{self, Pos2, Rect, Stroke, Vec2};
 use serde_json::Value;
 
 use corvus_api::i18n::{tr, tr_fmt};
@@ -83,7 +83,7 @@ impl Plugin for RemoteIdCheck {
             name: "Remote ID Check",
             icon: "id-card",
             description: "Compares the Remote ID codes this station sends with the tables of the standard",
-            version: "1.0.0",
+            version: "2.0.0",
             order: 90,
             can_tab: false,
         }
@@ -238,20 +238,20 @@ mod tests {
     use serde_json::json;
 
     #[test]
-    fn the_details_the_store_lists_are_the_plugins_own() {
-        let manifest = include_str!("../Cargo.toml").replace('\r', "");
+    fn the_manifest_says_what_the_plugin_says_of_itself() {
+        let manifest: serde_json::Value = serde_json::from_str(include_str!("../plugin.json")).expect("plugin.json");
         let i = RemoteIdCheck::default().info();
         for (key, want) in [
+            ("id", i.id),
             ("name", i.name),
             ("description", i.description),
             ("icon", i.icon),
             ("version", i.version),
         ] {
-            assert!(
-                manifest.contains(&format!("\n{key} = \"{want}\"\n")),
-                "[package.metadata.corvus] says something else than the plugin for {key}"
-            );
+            assert_eq!(manifest[key], want, "plugin.json says something else than the plugin for {key}");
         }
+        assert_eq!(manifest["order"], i.order);
+        assert_eq!(manifest["can_tab"], i.can_tab);
     }
 
     fn answer(class: i64) -> Value {

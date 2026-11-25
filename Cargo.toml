@@ -9,15 +9,7 @@ description = "The Remote ID Check plugin of Corvus GCS"
 
 [dependencies]
 corvus_api = { path = "../../src/api" }
-eframe = { workspace = true }
 serde_json = { workspace = true }
 
 [lib]
 crate-type = ["cdylib", "rlib"]
-
-[package.metadata.corvus]
-loadable = true
-name = "Remote ID Check"
-description = "Compares the Remote ID codes this station sends with the tables of the standard"
-icon = "id-card"
-version = "1.0.0"
