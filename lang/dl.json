@@ -4,6 +4,7 @@
     "Certified": "Zulassungsbflichdich",
     "Compares the codes this station sends with the tables of ASTM F3411 and ASD-STAN. It reads only and changes nothing. It is no proof that the identity is valid.": "Vergleichd die Codes, die diese Sdadion sended, mid dene Dabelle von ASTM F3411 und ASD-STAN. Des Plugin liesd bloß und änderd nix. Es is kein Nachweis, dass die Idendidäd güldich is.",
     "Compares the Remote ID codes this station sends with the tables of the standard": "Vergleichd die Remote-ID-Codes von dere Sdadion mid dene Dabelle von dere Norm",
+    "Credits: the code tables come from remoteid 0.4.0 by Matthew Busel (MIT licence).": "Credits: Die Codedabelle sind aus remoteid 0.4.0 vom Matthew Busel (MIT-Lizenz).",
     "Description type": "Ard vo dere Beschreibung",
     "EU category": "EU-Kadegorie",
     "EU class": "EU-Klasse",
@@ -20,7 +21,10 @@
     "Takeoff point": "Sdarbunkd",
     "Text": "Dexd",
     "The broadcast is off. These codes would be sent.": "Die Aussendung is aus. Die Codes däde gsended werdne.",
+    "Third party code": "Fremdcode",
+    "This plugin uses third party open source packages. Use it with caution and do not rely on its result alone.": "Des Plugin nutzd Open-Source-Pakede von Dridde. Mid Vorsichd benutze und ned bloß aufs Ergebnis verlasse.",
     "UTM assigned UUID": "Von UTM vergebne UUID",
+    "Warning": "Warnung",
     "{field}: the standard names no code {a}.": "{field}: die Norm kennd kein Code {a}.",
     "{field}: the station gave no code.": "{field}: die Sdadion had kein Code gnannd."
   }

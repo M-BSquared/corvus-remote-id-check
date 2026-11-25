@@ -4,6 +4,7 @@
     "Certified": "Zulassungspflichtig",
     "Compares the codes this station sends with the tables of ASTM F3411 and ASD-STAN. It reads only and changes nothing. It is no proof that the identity is valid.": "Vergleicht die Codes, die diese Station sendet, mit den Tabellen von ASTM F3411 und ASD-STAN. Das Plugin liest nur und ändert nichts. Es ist kein Nachweis, dass die Identität gültig ist.",
     "Compares the Remote ID codes this station sends with the tables of the standard": "Vergleicht die Remote-ID-Codes dieser Station mit den Tabellen der Norm",
+    "Credits: the code tables come from remoteid 0.4.0 by Matthew Busel (MIT licence).": "Credits: Die Codetabellen stammen aus remoteid 0.4.0 von Matthew Busel (MIT-Lizenz).",
     "Description type": "Art der Beschreibung",
     "EU category": "EU-Kategorie",
     "EU class": "EU-Klasse",
@@ -20,7 +21,10 @@
     "Takeoff point": "Startpunkt",
     "Text": "Text",
     "The broadcast is off. These codes would be sent.": "Die Aussendung ist aus. Diese Codes würden gesendet.",
+    "Third party code": "Fremdcode",
+    "This plugin uses third party open source packages. Use it with caution and do not rely on its result alone.": "Dieses Plugin nutzt Open-Source-Pakete von Dritten. Mit Vorsicht verwenden und sich nicht allein auf das Ergebnis verlassen.",
     "UTM assigned UUID": "Von UTM vergebene UUID",
+    "Warning": "Warnung",
     "{field}: the standard names no code {a}.": "{field}: die Norm kennt keinen Code {a}.",
     "{field}: the station gave no code.": "{field}: die Station nannte keinen Code."
   }

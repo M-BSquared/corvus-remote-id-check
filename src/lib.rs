@@ -9,12 +9,18 @@ use serde_json::Value;
 
 use corvus_api::i18n::{tr, tr_fmt};
 use corvus_api::plugin::{Host, Info, Plugin, Reply};
+use corvus_api::ui::chip::Chip;
 use corvus_api::ui::kit::{self, Button, Variant};
 use corvus_api::ui::message::{self, Tone};
+use corvus_api::ui::popover::{self, Content, Look};
 use corvus_api::ui::style::{self, Weight};
 use standard::FIELDS;
 
 const NOTE: &str = "Compares the codes this station sends with the tables of ASTM F3411 and ASD-STAN. It reads only and changes nothing. It is no proof that the identity is valid.";
+const WARNING: &str =
+    "This plugin uses third party open source packages. Use it with caution and do not rely on its result alone.";
+const CREDIT: &str = "Credits: the code tables come from remoteid 0.4.0 by Matthew Busel (MIT licence).";
+const CREDIT_URL: &str = "github.com/Mattbusel/remoteid";
 
 /// One field as it is sent, and what is to say about it.
 #[derive(Debug, Clone, PartialEq)]
@@ -104,7 +110,7 @@ impl Plugin for RemoteIdCheck {
 
     fn show(&mut self, ui: &mut egui::Ui, area: Rect, _h: &mut Host) -> f32 {
         let (x, w) = (area.left(), area.width());
-        let mut y = area.top();
+        let mut y = warning(ui, x, area.top()) + 10.0;
         let p = ui.painter().clone();
         let g = kit::wrapped_weight(ui, NOTE, 11.0, Weight::W400, style::text_3(), w, 1.5);
         p.galley(Pos2::new(x, y), g.clone(), style::text_3());
@@ -145,8 +151,50 @@ impl Plugin for RemoteIdCheck {
         if b.show(ui, Rect::from_min_size(Pos2::new(x, y), size), "ridcheckagain") {
             self.again = true;
         }
-        y + size.y - area.top()
+        y += size.y + 14.0;
+        y = credit(ui, x, y, w);
+        y - area.top()
     }
+}
+
+/// The warning about third party code: a chip, and the popover it opens.
+fn warning(ui: &mut egui::Ui, x: f32, y: f32) -> f32 {
+    let amber = style::warning();
+    let chip = Chip {
+        fg: style::text_1(),
+        border: amber,
+        icon: Some(("triangle-alert", 13.0, amber)),
+        ..Chip::new("Third party code")
+    };
+    let rect = chip.paint(ui, Pos2::new(x, y));
+    let id = ui.scope_id().with("ridthirdparty");
+    let resp = ui
+        .interact(rect, id, egui::Sense::click())
+        .on_hover_cursor(egui::CursorIcon::PointingHand);
+    let content = Content {
+        notes: vec![CREDIT.into(), CREDIT_URL.into()],
+        ..Content::hint("Warning", WARNING)
+    };
+    popover::drive(ui.ctx(), id, &resp, &content, Look::Hint);
+    rect.bottom()
+}
+
+/// Who wrote the tables, under the view; returns its bottom.
+fn credit(ui: &egui::Ui, x: f32, y: f32, w: f32) -> f32 {
+    let p = ui.painter();
+    p.hline(
+        egui::Rangef::new(x, x + w),
+        y + 0.5,
+        Stroke::new(1.0, style::border_soft()),
+    );
+    let mut y = y + 9.0;
+    for text in [CREDIT, CREDIT_URL] {
+        let g = kit::wrapped_weight(ui, text, 10.5, Weight::W400, style::text_3(), w, 1.4);
+        let h = g.size().y;
+        p.galley(Pos2::new(x, y), g, style::text_3());
+        y += h + 2.0;
+    }
+    y
 }
 
 fn row(ui: &egui::Ui, x: f32, y: f32, w: f32, l: &Line) -> f32 {

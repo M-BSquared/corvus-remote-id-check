@@ -4,6 +4,7 @@
     "Certified": "Certifiée",
     "Compares the codes this station sends with the tables of ASTM F3411 and ASD-STAN. It reads only and changes nothing. It is no proof that the identity is valid.": "Compare les codes envoyés par cette station avec les tables de l'ASTM F3411 et de l'ASD-STAN. Lecture seule, rien n'est modifié. Ce n'est pas une preuve que l'identité est valide.",
     "Compares the Remote ID codes this station sends with the tables of the standard": "Compare les codes Remote ID de cette station avec les tables de la norme",
+    "Credits: the code tables come from remoteid 0.4.0 by Matthew Busel (MIT licence).": "Crédits : les tables de codes proviennent de remoteid 0.4.0 de Matthew Busel (licence MIT).",
     "Description type": "Type de description",
     "EU category": "Catégorie UE",
     "EU class": "Classe UE",
@@ -20,7 +21,10 @@
     "Takeoff point": "Point de décollage",
     "Text": "Texte",
     "The broadcast is off. These codes would be sent.": "La diffusion est désactivée. Ces codes seraient envoyés.",
+    "Third party code": "Code tiers",
+    "This plugin uses third party open source packages. Use it with caution and do not rely on its result alone.": "Ce plugin utilise des paquets open source de tiers. À utiliser avec prudence, sans se fier à son seul résultat.",
     "UTM assigned UUID": "UUID attribué par l'UTM",
+    "Warning": "Avertissement",
     "{field}: the standard names no code {a}.": "{field} : la norme ne définit pas de code {a}.",
     "{field}: the station gave no code.": "{field} : la station n'a donné aucun code."
   }
